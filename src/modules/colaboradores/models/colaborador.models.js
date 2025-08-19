@@ -73,3 +73,5 @@ const ColaboradorModel = sequelize.define(
     updatedAt: "atualizado_em"
   }
 );
+
+export default ColaboradorModel

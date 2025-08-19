@@ -52,12 +52,12 @@ const AgendaModel = sequelize.define(
             }
         },
         status:{
-            type: DataTypes.ENUM('agendado', 'confirmado', 'cancelado'),
+            type: DataTypes.ENUM('marcado', 'confirmado', 'cancelado', 'concluido'),
             allowNull: false,
             validate:{
                 isIn: {
-                    args: [['agendado', 'confirmado', 'cancelado']],
-                    msg: "O status deve ser 'agendado', 'confirmado' ou 'cancelado'."
+                    args: [['marcado', 'confirmado', 'cancelado', 'concluido']],
+                    msg: "O status deve ser 'marcado', 'confirmado', 'cancelado' ou 'concluido'."
                 }
             }
         }
